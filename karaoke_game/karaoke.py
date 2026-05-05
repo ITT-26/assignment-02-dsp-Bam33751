@@ -297,7 +297,7 @@ class PitchDetector:
         magnitudes = np.abs(fft_result)
         freqs = np.fft.rfftfreq(len(data), 1/rate)
 
-    # Spektrum behalten, damit Obertöne noch da sind
+        # Spektrum behalten, damit Obertöne noch da sind
         spec_mask = freqs <= 2000
         freqs_hps = freqs[spec_mask]
         mag_hps = magnitudes[spec_mask]
@@ -322,10 +322,8 @@ def midi_note_to_freq(note):
 
 
 def cents_diff(freq_1, freq_2):
-    """Calculate the difference in cents between two frequencies.
-
-    More accurate way for calucating pitch difference in music context.
-    """
+    # Calculate the difference in cents between two frequencies
+    # Cents are more accurate in musical contexts than absolute frequency differences
     return 1200 * np.log2(freq_1 / freq_2)
 
 
@@ -372,13 +370,14 @@ def get_input_decive():
 
 
 def get_karaoke_song():
-    # print info about audio devices
+    # print info about available songs
     print("Available karaoke songs:\n")
     songs = {'Ode and die Freude': 'freude',
-             'Von den blauen Bergen kommen wir': 'berge'}
+             'Eine Insel mit zwei Bergen': 'berge'}
     for i, (song_name, song_file) in enumerate(songs.items()):
         print(f"{i}: {song_name}")
 
+    # let user select song
     song = int(input("\nSelect a song: "))
     song_items = list(songs.items())
     song_name, song_file = song_items[song]
