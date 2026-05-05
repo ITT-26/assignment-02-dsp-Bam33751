@@ -126,7 +126,7 @@ The whistle must be continuous.
 
 You must first whistle one tone and then directly transition to another tone.
 
-Detection may fail if there is a pause between the tones.
+Detection may fail if there is a pause between the tones or if the pitch is not stable.
 
 Only a short pause of about 0.3 seconds is tolerated.
 

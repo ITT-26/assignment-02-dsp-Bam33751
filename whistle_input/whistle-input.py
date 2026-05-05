@@ -29,7 +29,7 @@ class ChirpDetector:
         self.chirp_diff = chirp_diff
         self.chirp_start_freq = None
         self.chirp_start_time = None
-        self.freq_history = deque(maxlen=10)
+        self.freq_history = deque(maxlen=6)
 
     def audio_callback(self, indata, frames, time, status):
         if status:
@@ -73,14 +73,14 @@ class ChirpDetector:
         If a chirp is detected, it adds an "up" or "down" event to the event queue.
         """
 
-        if len(self.freq_history) < 10:
+        if len(self.freq_history) < 6:
             return
         check_freqs = self.freq_history.copy()
 
         # Check if we are already tracking a chirp start
         if self.chirp_start_freq is not None:
             # If it's been too long since the chirp started, reset
-            if time.time() - self.chirp_start_time > 0.3:
+            if time.time() - self.chirp_start_time > 0.5:
                 self.chirp_start_freq = None
                 self.chirp_start_time = None
                 self.freq_history.clear()
