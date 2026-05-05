@@ -66,7 +66,7 @@ class MidiVisual:
                 color=(255, 255, 255),
                 batch=self.batch
             )
-            rect.opacity = 90
+            rect.opacity = 95
             self.rectangles.append(rect)
 
     def draw(self):
