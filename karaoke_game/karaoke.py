@@ -26,7 +26,8 @@ class MidiVisual:
 
         self.freq_high = self.get_max_freq()
         self.freq_low = self.get_min_freq()
-        self.pixel_per_seconds = 200
+        song_duration = max(note["end"] for note in self.notes)
+        self.pixel_per_seconds = (self.width * 0.95) / song_duration
         self.note_height = 30
         self.batch = pyglet.graphics.Batch()
         self.rectangles = []
@@ -98,8 +99,8 @@ class Game:
         self.score_label = pyglet.text.Label(
             text="Score:",
             font_size=36,
-            x=window.width - window.width / 8,
-            y=window.height - window.height / 15
+            x=window.width * 0.02,
+            y=window.height * 0.9
         )
         self.pitch_info = pyglet.text.Label(
             text="",
