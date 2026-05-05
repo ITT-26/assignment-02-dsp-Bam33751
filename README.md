@@ -56,6 +56,8 @@ python karaoke.py
 
 ### Gameplay
 
+For the best experience, please use headphones to avoid microphone–speaker interference. Alternatively, you can use an external input device such as a smartphone, but make sure it is not placed too close to the speakers.
+
 During the game, target notes are displayed as visual hints.
 
 Your sung frequency is detected in real time and mapped to these target notes.
@@ -64,6 +66,12 @@ A moving cursor shows your current position in the song.
 
 You receive a score based on how accurately your singing matches the notes.
 
+
+<p align="center">
+
+  <img src="docs/karaoke.png" alt="Karaoke Game Screenshot" width="700">
+
+</p>
 ---
 
 ## Whistle Input
@@ -146,7 +154,7 @@ This allows navigation in other applications.
 ---
 
 ### macOS Note
-These programs where created on mac os, you may need to adjust the window size of the pyglet apllications for better expierence. Multiple it by the factor 2.
+These applications where created on mac os, you may need to adjust the window size of the pyglet apllications for better expierence. 
 
 ---
 
