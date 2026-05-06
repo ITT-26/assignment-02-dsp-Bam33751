@@ -39,6 +39,8 @@ class ChirpDetector:
         self.detect_live_frequency(data, RATE)
 
     def detect_live_frequency(self, data, rate):
+        # Improved with ChatGPT
+        # Prompt: Get most dominant frequency from live audio callback in python
         if np.max(np.abs(data)) < 0.05:
             return None
 
