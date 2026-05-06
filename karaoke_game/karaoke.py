@@ -260,7 +260,7 @@ class PitchDetector:
 
         if freq is not None:
             self.freq_history.append(freq)
-            if len(self.freq_history) >= 2:
+            if len(self.freq_history) >= 3:
                 self.latest_freq = float(np.median(self.freq_history))
         else:
             self.latest_freq = None
