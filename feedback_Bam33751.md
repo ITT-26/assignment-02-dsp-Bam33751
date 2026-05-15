@@ -1,4 +1,4 @@
-# Bam33751 (8.5/15P)
+# Bam33751 (10.5/15P)
 
 ## 1 Karaoke Game (4.5/6P)
 
@@ -11,7 +11,7 @@
  * frequency detection works robustly, but you used AI to generate all the code (-1P)
  * latency is low, good job
 
-## 2 Whiste Input (3/8P)
+## 2 Whiste Input (5/8P)
 
  * does not work for whistling
  * does not work for making a UUUUIIIII sound
@@ -21,6 +21,11 @@
  * pyglet test program works (1P)
  * if it works, latency seems to be low (1P)
  * can't give you more points as it does not really work
+
+ EDIT:
+
+ * when whisteling in a very special manner, it works kind of reliable (1P)
+ * also, when whisteling in a very special manner, it it kind of robust against background noise (1P)
 
 ## Code Structure and Meta Stuff (1/1P)
 
